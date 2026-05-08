@@ -340,6 +340,7 @@ img {
 
   .hero.hero--image .hero-inner {
     min-height: clamp(220px, 36vh, 380px);
+    padding-top: clamp(72px, 14vh, 140px);
   }
 
   .hero.hero--image .hero-copy {
@@ -353,6 +354,10 @@ img {
     background-size: contain;
     background-position: center;
     background-color: #eef2f5;
+  }
+
+  .hero.hero--image .hero-inner {
+    padding-top: clamp(92px, 18vh, 200px);
   }
 }
 
