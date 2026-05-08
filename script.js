@@ -361,7 +361,7 @@ function renderHero(data) {
 }
 
 function renderCvCasellarioControl(list) {
-  const label = "C.V. / Casellario"
+  const label = "Documenti (PDF)"
   const url = sanitizeUrl(list && (list.documentUrl || list.cvcasellarioUrl) ? list.documentUrl || list.cvcasellarioUrl : "")
   if (!url || isPlaceholderUrl(url)) {
     const s = el("span", { className: "btn btn-outline btn-doc btn-disabled", text: label })
