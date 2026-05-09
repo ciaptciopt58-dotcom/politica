@@ -272,6 +272,8 @@ img {
 .hero.hero--image {
   --hero-bg: url("./1.webp");
   --hero-bg-pos: 26% 68%;
+  --hero-bg-size: cover;
+  --hero-bg-scale: 1.03;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -295,10 +297,10 @@ img {
   position: absolute;
   inset: 0;
   background-image: var(--hero-bg);
-  background-size: cover;
+  background-size: var(--hero-bg-size);
   background-position: var(--hero-bg-pos);
   background-repeat: no-repeat;
-  transform: scale(1.03);
+  transform: scale(var(--hero-bg-scale));
   filter: saturate(1.06) contrast(1.07) brightness(0.94);
   z-index: 0;
   pointer-events: none;
@@ -383,40 +385,6 @@ img {
   filter: blur(0);
 }
 
-@media (max-width: 640px) {
-  .hero.hero--image {
-    --hero-bg-pos: 40% 62%;
-  }
-
-  .hero.hero--image .hero-inner {
-    min-height: clamp(220px, 36vh, 380px);
-    padding-top: clamp(12px, 4.2vh, 28px);
-    padding-bottom: clamp(18px, 6.2vh, 44px);
-    align-items: center;
-  }
-
-  .hero.hero--image .hero-kicker {
-    align-self: center;
-    margin-top: -4px;
-  }
-
-  .hero.hero--image .hero-copy {
-    position: static;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero.hero--image {
-    --hero-bg-pos: 50% 56%;
-  }
-
-  .hero.hero--image .hero-inner {
-    min-height: clamp(260px, 58vh, 520px);
-  }
-}
-
 @media (min-width: 1024px) {
   .hero.hero--image {
     --hero-bg-pos: center 32%;
@@ -466,11 +434,22 @@ img {
 }
 
 @media (max-width: 640px) {
+  .hero.hero--image {
+    --hero-bg-pos: 72% 40%;
+    --hero-bg-size: cover;
+    --hero-bg-scale: 1.01;
+  }
+
   .hero.hero--image .hero-inner {
     min-height: clamp(240px, 46vh, 460px);
     padding-top: clamp(12px, 4.2vh, 28px);
     padding-bottom: clamp(18px, 6.2vh, 44px);
     align-items: center;
+  }
+
+  .hero.hero--image .hero-kicker {
+    align-self: center;
+    margin-top: -4px;
   }
 
   .hero.hero--image .hero-copy {
@@ -483,6 +462,12 @@ img {
 }
 
 @media (max-width: 480px) {
+  .hero.hero--image {
+    --hero-bg-pos: center;
+    --hero-bg-size: contain;
+    --hero-bg-scale: 1;
+  }
+
   .hero.hero--image .hero-inner {
     min-height: clamp(260px, 58vh, 520px);
   }
@@ -490,6 +475,18 @@ img {
   .btn.btn-doc {
     font-size: 13px;
     padding: 10px 10px;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.hero--image {
+    --hero-bg-pos: 72% 22%;
+    --hero-bg-size: contain;
+    --hero-bg-scale: 1;
+  }
+
+  .hero.hero--image .hero-inner {
+    min-height: clamp(320px, 62vh, 560px);
   }
 }
 
