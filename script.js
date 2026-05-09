@@ -358,12 +358,13 @@ function renderHero(data) {
   const title = document.getElementById("hero-title")
   const mayor = document.getElementById("candidateName")
   const t = String(data && data.electionTitle ? data.electionTitle : "").trim()
-  const match = t.match(/^(Elezioni\s+Amministrative)\s*(.*)$/i)
-  const kickerText = match ? match[1].toUpperCase() : "ELEZIONI AMMINISTRATIVE"
-  const mainText = match && match[2] ? match[2].trim() : t
-  if (kicker) kicker.textContent = kickerText
-  if (title) title.textContent = mainText || t
-  if (mayor) mayor.textContent = data.candidateMayor
+  const cityYear = t.replace(/^Elezioni\s+Amministrative\s*/i, "").trim() || t
+  if (kicker) kicker.textContent = cityYear
+  if (mayor) {
+    mayor.textContent = data.candidateMayor
+  } else if (title) {
+    title.textContent = data.candidateMayor
+  }
 }
 
 function renderCvCasellarioControl(list) {

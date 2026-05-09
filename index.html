@@ -14,6 +14,8 @@
       document.documentElement.classList.add("js")
     </script>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preload" as="image" href="./1.webp" fetchpriority="high" media="(max-width: 640px) and (orientation: portrait)" />
+    <link rel="preload" as="image" href="./1.1.webp" fetchpriority="high" media="(min-width: 641px)" />
     <script defer src="./nav.js"></script>
     <script defer src="./script.js"></script>
   </head>
@@ -46,13 +48,19 @@
 
     <main id="contenuto" class="site-main" role="main">
       <section class="hero hero--image" id="home" aria-labelledby="hero-title">
+        <div class="hero__media">
+          <picture>
+            <source media="(max-width: 640px) and (orientation: portrait)" srcset="./1.webp" />
+            <source srcset="./1.1.webp" />
+            <img class="hero__img" src="./1.1.webp" alt="Manifesto elettorale" decoding="async" fetchpriority="high" />
+          </picture>
+          <div class="hero__overlay" aria-hidden="true"></div>
+        </div>
         <div class="container hero-inner">
-          <div class="hero-kicker" id="hero-kicker">ELEZIONI AMMINISTRATIVE</div>
+          <div class="hero-kicker" id="hero-kicker">Marcianise 2026</div>
           <div class="hero-copy">
-            <h1 class="h1" id="hero-title">Elezioni Amministrative Marcianise 2026</h1>
-            <p class="lead">
-              Candidata sindaco: <span class="lead-strong" id="candidateName">Maria Luigia Iodice</span>
-            </p>
+            <h1 class="h1" id="hero-title"><span id="candidateName">Maria Luigia Iodice</span></h1>
+            <p class="lead">Elezioni amministrative · Candidata sindaco</p>
           </div>
         </div>
       </section>
