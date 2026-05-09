@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elezioni Amministrative Marcianise 2026</title>
+    <meta name="description" content="Pagina informativa: lista e documentazione candidati." />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <script>
+      document.documentElement.classList.add("js")
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./nav.js"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Torna alla sezione Home">
+          <img class="brand-logo" src="./2.webp" alt="Logo Marcianise 2026" width="44" height="44" decoding="async" />
+          <div class="brand-text">
+            <div class="brand-title" id="brandTitle">Marcianise 2026</div>
+            <div class="brand-subtitle">Elezioni amministrative</div>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="topNav">
+          <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <nav class="top-nav" id="topNav" aria-label="Navigazione">
+          <ul class="nav-list" id="topNavList"></ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenuto" class="site-main" role="main">
+      <section class="hero hero--image" id="home" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-kicker" id="hero-kicker">ELEZIONI AMMINISTRATIVE</div>
+          <div class="hero-copy">
+            <h1 class="h1" id="hero-title">Elezioni Amministrative Marcianise 2026</h1>
+            <p class="lead">
+              Candidata sindaco: <span class="lead-strong" id="candidateName">Maria Luigia Iodice</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="liste" aria-labelledby="lists-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2" id="lists-title">Liste</h2>
+          </div>
+
+          <div id="listsRoot" class="lists-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section legal-section" id="privacy-policy" aria-labelledby="privacy-title">
+        <div class="container legal-content">
+          <div class="section-head">
+            <h2 class="h2" id="privacy-title">Privacy Policy</h2>
+            <p class="muted">Informativa sul trattamento dei dati personali ai sensi del Regolamento (UE) 2016/679 (“GDPR”).</p>
+          </div>
+
+          <dl class="legal-dl">
+            <dt>Titolare del trattamento</dt>
+            <dd>
+              Il Titolare del trattamento dei dati personali trattati attraverso il presente sito è Maria Luigia Iodice, con recapito in Via Roma 25,
+              81025 Marcianise (CE).<br />
+              Email di contatto: [INSERIRE EMAIL UFFICIALE]<br />
+              PEC: [INSERIRE EVENTUALE PEC]<br />
+              Dominio del sito: [INSERIRE DOMINIO DEL SITO]
+            </dd>
+
+            <dt>Finalità del trattamento</dt>
+            <dd>
+              Il presente sito è realizzato con finalità di informazione politica ed elettorale in relazione alla candidatura a sindaco di Maria Luigia
+              Iodice per le elezioni amministrative del Comune di Marcianise 2026. Il sito può inoltre pubblicare documentazione relativa ai candidati
+              collegati alle liste, inclusi curriculum vitae e certificati del casellario giudiziale, ai sensi della normativa vigente in materia di
+              trasparenza elettorale.
+            </dd>
+
+            <dt>Base giuridica del trattamento</dt>
+            <dd>
+              Il trattamento dei dati personali pubblicati sul sito trova la propria base giuridica nell’adempimento di obblighi previsti dalla normativa
+              vigente in materia di trasparenza elettorale e, per i dati tecnici di navigazione eventualmente raccolti, nel legittimo interesse al corretto
+              funzionamento e alla sicurezza del sito.
+            </dd>
+
+            <dt>Categorie di dati trattati</dt>
+            <dd>
+              <ul class="legal-list">
+                <li>Dati di navigazione strettamente tecnici</li>
+                <li>Dati identificativi contenuti nei documenti pubblicati</li>
+                <li>Dati presenti nei curriculum vitae e nei certificati del casellario giudiziale dei candidati, nei limiti consentiti dalla legge</li>
+              </ul>
+            </dd>
+
+            <dt>Minimizzazione dei dati</dt>
+            <dd>
+              I documenti pubblicati online devono essere preventivamente verificati e privati dei dati eccedenti o non pertinenti rispetto alle finalità
+              di trasparenza elettorale.
+              <div class="notice notice--info" role="note">
+                <p class="muted">A titolo esemplificativo, non devono comparire o devono essere oscurati dati quali codice fiscale, indirizzo di residenza, numero di telefono personale, indirizzo email personale, riferimenti a documenti di riconoscimento, firma autografa, stato civile ed eventuale foto.</p>
+              </div>
+            </dd>
+
+            <dt>Modalità del trattamento</dt>
+            <dd>
+              Il trattamento è effettuato con strumenti informatici e telematici, secondo principi di liceità, correttezza, trasparenza, pertinenza e
+              minimizzazione, adottando misure ragionevoli di sicurezza adeguate alla natura dei dati trattati.
+            </dd>
+
+            <dt>Comunicazione e diffusione dei dati</dt>
+            <dd>
+              I dati pubblicati sul sito possono essere resi accessibili al pubblico esclusivamente nei limiti previsti dalla normativa in materia di
+              trasparenza elettorale. I documenti pubblicati possono inoltre essere trasmessi al Comune di Marcianise nei termini e con le modalità
+              previste dagli avvisi ufficiali.
+            </dd>
+
+            <dt>Periodo di conservazione</dt>
+            <dd>
+              I dati personali sono conservati online per il tempo strettamente necessario al perseguimento delle finalità informative ed agli adempimenti
+              previsti dalla normativa elettorale applicabile, salvo eventuali ulteriori obblighi di legge o esigenze di tutela giuridica.
+            </dd>
+
+            <dt>Diritti degli interessati</dt>
+            <dd>
+              Gli interessati possono esercitare, nei casi previsti dagli articoli 15 e seguenti del GDPR, il diritto di accesso, rettifica, cancellazione,
+              limitazione del trattamento, opposizione e gli altri diritti riconosciuti dalla normativa applicabile. Le richieste possono essere inviate al
+              Titolare del trattamento ai recapiti sopra indicati.
+            </dd>
+
+            <dt>Diritto di reclamo</dt>
+            <dd>Resta fermo il diritto di proporre reclamo al Garante per la protezione dei dati personali secondo le modalità previste dalla normativa vigente.</dd>
+
+            <dt>Aggiornamenti</dt>
+            <dd>
+              La presente informativa può essere aggiornata in qualsiasi momento, anche in relazione a modifiche normative, tecniche o organizzative del
+              sito. Data ultimo aggiornamento: [INSERIRE DATA]
+            </dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section legal-section" id="cookie-policy" aria-labelledby="cookie-title">
+        <div class="container legal-content">
+          <div class="section-head">
+            <h2 class="h2" id="cookie-title">Cookie Policy</h2>
+            <p class="muted">Informazioni sull’uso di cookie e tecnologie simili.</p>
+          </div>
+
+          <div class="notice notice--info" role="note">
+            <p class="muted">
+              Questo sito non utilizza cookie di profilazione né strumenti di tracciamento di terze parti. Se presenti, vengono utilizzati esclusivamente
+              cookie tecnici strettamente necessari al corretto funzionamento del sito.
+            </p>
+          </div>
+
+          <dl class="legal-dl">
+            <dt>Cosa sono i cookie</dt>
+            <dd>Piccoli file di testo che i siti web possono salvare sul dispositivo dell’utente per migliorare funzionalità e sicurezza.</dd>
+
+            <dt>Cookie utilizzati</dt>
+            <dd>
+              <ul class="legal-list">
+                <li>Cookie tecnici: necessari per la navigazione e per alcune funzionalità di base (se presenti)</li>
+                <li>Cookie di profilazione: non utilizzati</li>
+                <li>Cookie di terze parti: non utilizzati</li>
+              </ul>
+            </dd>
+
+            <dt>Banner consenso</dt>
+            <dd>
+              Non è previsto un banner di consenso, poiché non sono impiegati cookie non tecnici. Qualora in futuro venissero introdotti strumenti di
+              terze parti che richiedono consenso, il sito dovrà essere aggiornato con una gestione del consenso conforme.
+            </dd>
+
+            <dt>Gestione cookie dal browser</dt>
+            <dd>È possibile gestire o disabilitare i cookie dalle impostazioni del proprio browser; la disabilitazione potrebbe influire su funzionalità tecniche.</dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <nav class="footer-nav" aria-label="Link legali">
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#liste">Liste</a></li>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#cookie-policy">Cookie Policy</a></li>
+          </ul>
+        </nav>
+        <p class="footer-text">Documentazione candidati pubblicata ai sensi della normativa vigente in materia di trasparenza elettorale</p>
+        <p class="footer-mini" id="footerYear"></p>
+      </div>
+    </footer>
+
+  </body>
+</html>
