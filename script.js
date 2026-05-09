@@ -110,7 +110,7 @@ const siteData = {
       coalition: "Maria Luigia Iodice",
       logoSrc: "8.webp",
       logoAlt: "Simbolo Avanti Marcianise",
-      documentUrl: "./cvcgavanti/index.html",
+      documentUrl: "./cvcgavanti/",
       candidates: [
         { name: "Blanco Sergio" },
         { name: "Caldara Antonio" },
@@ -354,14 +354,20 @@ function renderListSymbol(list) {
 
 
 function renderHero(data) {
+  const kicker = document.getElementById("hero-kicker")
   const title = document.getElementById("hero-title")
   const mayor = document.getElementById("candidateName")
-  if (title) title.textContent = data.electionTitle
+  const t = String(data && data.electionTitle ? data.electionTitle : "").trim()
+  const match = t.match(/^(Elezioni\s+Amministrative)\s*(.*)$/i)
+  const kickerText = match ? match[1].toUpperCase() : "ELEZIONI AMMINISTRATIVE"
+  const mainText = match && match[2] ? match[2].trim() : t
+  if (kicker) kicker.textContent = kickerText
+  if (title) title.textContent = mainText || t
   if (mayor) mayor.textContent = data.candidateMayor
 }
 
 function renderCvCasellarioControl(list) {
-  const label = "Documenti (PDF)"
+  const label = "C.V./Casellario giudiziale"
   const url = sanitizeUrl(list && (list.documentUrl || list.cvcasellarioUrl) ? list.documentUrl || list.cvcasellarioUrl : "")
   if (!url || isPlaceholderUrl(url)) {
     const s = el("span", { className: "btn btn-outline btn-doc btn-disabled", text: label })
