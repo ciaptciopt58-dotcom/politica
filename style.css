@@ -274,10 +274,15 @@ img {
   --hero-bg-pos: 26% 68%;
   --hero-bg-size: cover;
   --hero-bg-scale: 1.03;
+  --hero-underlay-opacity: 0;
+  --hero-underlay-blur: 0px;
+  --hero-underlay-scale: 1.06;
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background: #0b1220;
+  background:
+    radial-gradient(120% 120% at 10% 10%, rgba(30, 58, 138, 0.22) 0%, rgba(2, 6, 23, 0) 58%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92) 0%, rgba(2, 6, 23, 0.92) 100%);
   border-bottom-color: rgba(226, 232, 240, 0.5);
 }
 
@@ -285,9 +290,19 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background:
+  background-image:
     radial-gradient(120% 110% at 30% 18%, rgba(2, 6, 23, 0.2) 0%, rgba(2, 6, 23, 0.08) 55%, rgba(2, 6, 23, 0.18) 100%),
-    linear-gradient(0deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.38) 44%, rgba(2, 6, 23, 0.14) 70%, rgba(2, 6, 23, 0) 100%);
+    linear-gradient(0deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.38) 44%, rgba(2, 6, 23, 0.14) 70%, rgba(2, 6, 23, 0) 100%),
+    var(--hero-bg);
+  background-size:
+    120% 110%,
+    100% 100%,
+    var(--hero-bg-size);
+  background-position:
+    30% 18%,
+    0 0,
+    var(--hero-bg-pos);
+  background-repeat: no-repeat;
   pointer-events: none;
   z-index: 1;
 }
@@ -297,11 +312,16 @@ img {
   position: absolute;
   inset: 0;
   background-image: var(--hero-bg);
-  background-size: var(--hero-bg-size);
+  background-size: cover;
   background-position: var(--hero-bg-pos);
   background-repeat: no-repeat;
-  transform: scale(var(--hero-bg-scale));
-  filter: saturate(1.06) contrast(1.07) brightness(0.94);
+  transform: scale(var(--hero-underlay-scale));
+  opacity: var(--hero-underlay-opacity);
+  filter:
+    blur(var(--hero-underlay-blur))
+    saturate(1.06)
+    contrast(1.08)
+    brightness(0.92);
   z-index: 0;
   pointer-events: none;
 }
@@ -438,6 +458,9 @@ img {
     --hero-bg-pos: 72% 40%;
     --hero-bg-size: cover;
     --hero-bg-scale: 1.01;
+    --hero-underlay-opacity: 0.12;
+    --hero-underlay-blur: 10px;
+    --hero-underlay-scale: 1.12;
   }
 
   .hero.hero--image .hero-inner {
@@ -466,6 +489,9 @@ img {
     --hero-bg-pos: center;
     --hero-bg-size: contain;
     --hero-bg-scale: 1;
+    --hero-underlay-opacity: 0.42;
+    --hero-underlay-blur: 18px;
+    --hero-underlay-scale: 1.18;
   }
 
   .hero.hero--image .hero-inner {
@@ -483,6 +509,9 @@ img {
     --hero-bg-pos: 72% 22%;
     --hero-bg-size: contain;
     --hero-bg-scale: 1;
+    --hero-underlay-opacity: 0.52;
+    --hero-underlay-blur: 22px;
+    --hero-underlay-scale: 1.22;
   }
 
   .hero.hero--image .hero-inner {
